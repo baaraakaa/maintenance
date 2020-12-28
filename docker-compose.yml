@@ -1,9 +1,13 @@
 version: '3'
-
 services:
   web:
-    image: nginx:latest
-    ports: 
+    image: staticfloat/nginx-certbot
+    ports:
       - "80:80"
+      - "443:443"
     volumes:
-      - ./webroot:/usr/share/nginx/html:ro
+      - ./webroot:/webroot:ro
+      - ./conf.d:/etc/nginx/user.conf.d:ro
+      - ./certbot_extra_domains:/etc/nginx/certbot/extra_domains:ro
+    environment:
+      CERTBOT_EMAIL: ${CERTBOT_EMAIL}
