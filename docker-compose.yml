@@ -1,9 +1,8 @@
 version: '3'
-
 services:
   web:
     image: nginx:latest
     ports: 
-      - "80:80"
+      - "8080:80"
     volumes:
       - ./webroot:/usr/share/nginx/html:ro
