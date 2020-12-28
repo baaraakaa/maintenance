@@ -12,7 +12,7 @@ docker-compose or compatible alternative
 
 ## Usage
 - Adjust the static html in this repo's `/webroot` to your liking
-- change`server_name localhost` in `conf.d/nginx.conf` to your domain i.e. `server_name example.com`
+- change `server_name localhost` in `conf.d/nginx.conf` to your domain i.e. `server_name example.com`
 - similarly, change the `ssl_certificate` and `ssl_certificate_key` lines to replace `server.company.com` with your domain `example.com`
 - set `CERTBOT_EMAIL` environment variable, many ways to do this, but you can just do `echo "CERTBOT_EMAIL=user@example.com" >> .env` in the root of this directory (with your own email address obviously)
 - run with `docker-compose up` or `docker-compose up -d` for detached mode once you're ready.
