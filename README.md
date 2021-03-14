@@ -5,7 +5,7 @@ A simple static maintenance page in a docker-compose
 
 The `local` branch exposes port 8080 and does not set up SSL, use this for local dev.
 
-If you don't want/need certs, use the local branch, and just change the `ports` in `docker-compose.yml` from `8080:80` to `80:80`
+If you don't want/need certs in your live environment; use the local branch, and just change the `ports` in `docker-compose.yml` from `8080:80` to `80:80`
 
 ## Dependencies
 docker-compose or compatible alternative
